@@ -1,6 +1,6 @@
 Source: measurement-kit
 Priority: optional
-Maintainer: Vagrant Default User <bassosimone@gmail.com>
+Maintainer: Simone Basso <bassosimone@gmail.com>
 Build-Depends: debhelper (>= 9), autotools-dev, libssl-dev, libevent-dev, libgeoip-dev
 Standards-Version: 3.9.5
 Section: libs
