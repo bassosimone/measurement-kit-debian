@@ -10,7 +10,7 @@ vagrant up
 vagrant ssh
 # following commands run inside the ssh
 cd /mk/measurement-kit
-./script/build-dsc
+./script/debuild
 exit
 # again on the host machine
 ./script/sign
