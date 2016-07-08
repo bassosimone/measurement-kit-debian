@@ -1,4 +1,0 @@
-#!/bin/sh
-set -e
-v=0.2.3
-tar -czf measurement-kit-$v.debian.tar.gz debian
