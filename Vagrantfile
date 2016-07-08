@@ -7,8 +7,9 @@ Vagrant.configure(2) do |config|
     end
     jessie64.vm.provision "shell", inline: <<-SHELL
       sudo apt-get update
-      sudo apt-get install -y autotools-dev build-essential ca-certificates \
-        devscripts git libevent-dev libssl-dev libgeoip-dev lintian
+      sudo apt-get install -y autoconf automake autotools-dev \
+        build-essential ca-certificates devscripts git libevent-dev \
+        libssl-dev libgeoip-dev libtool lintian
     SHELL
   end
 end
