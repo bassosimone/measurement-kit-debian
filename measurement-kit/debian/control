@@ -1,0 +1,26 @@
+Source: measurement-kit
+Priority: optional
+Maintainer: Vagrant Default User <bassosimone@gmail.com>
+Build-Depends: debhelper (>= 9), autotools-dev
+Standards-Version: 3.9.5
+Section: libs
+Homepage: https://github.com/measurement-kit/measurement-kit/
+Vcs-Git: https://github.com/bassosimone/measurement-kit_debian.git
+Vcs-Browser: https://github.com/bassosimone/measurement-kit_debian
+
+Package: libmeasurement-kit-dev
+Section: libdevel
+Architecture: any
+Depends: measurement-kit0 (= ${binary:Version}), ${misc:Depends}
+Description: Portable C++11 network measurement library
+ MeasurementKit is a network measurement library written in C++11 that
+ implements network censorship tests (e.g. several OONI tests), and network
+ performance tests (e.g. NDT).
+
+Package: libmeasurement-kit0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Portable C++11 network measurement library
+ MeasurementKit is a network measurement library written in C++11 that
+ implements network censorship tests (e.g. several OONI tests), and network
+ performance tests (e.g. NDT).

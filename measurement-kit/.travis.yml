@@ -1,0 +1,65 @@
+language: cpp
+
+#branches:
+#  except:
+#    - /^doc\/.*$/
+
+install:
+    - if [ "$VER" != ""  ]; then
+          export CXX="$CXX-$VER" CC="$CC-$VER";
+      fi;
+    - ARG="-q --with-geoip=builtin"
+    - if [ "$COVERAGE" = "true" ]; then
+        export CFLAGS=--coverage CXXFLAGS=--coverage LDFLAGS=--coverage;
+        pip install --user cpp-coveralls;
+      fi
+    - ./autogen.sh
+    - ./build/dependency geoip
+
+script:
+    - if [ "$BUILD_TYPE" = "ios" ]; then
+        ./mobile/ios/scripts/build.sh;
+      else
+        ./configure $ARG && make -j2 V=0;
+      fi
+    - if [ "$BUILD_TYPE" != "ios" ]; then
+        make -j2 check-am V=0;
+      fi
+
+# Silence gcov standard output since it produces way too much output
+after_success:
+    - if [ "$COVERAGE" = "true" ]; then
+        coveralls --gcov /usr/bin/gcov-5 --exclude src/ext -b .
+                  --exclude example --exclude third_party
+                  --exclude include/measurement_kit/ext > /dev/null;
+      fi
+
+after_failure:
+    - if [ -f "test-suite.log" ]; then
+        cat test-suite.log;
+      fi
+
+matrix:
+  include:
+
+    - sudo: false
+      compiler: gcc-5
+      env: COVERAGE=true VER=5
+      addons:
+        apt:
+          packages:
+            - g++-5
+            - gcc-5
+          sources:
+            - ubuntu-toolchain-r-test
+
+    - sudo: false
+      compiler: g++-5
+      env: VER=5
+      addons:
+        apt:
+          packages:
+            - g++-5
+            - gcc-5
+          sources:
+            - ubuntu-toolchain-r-test

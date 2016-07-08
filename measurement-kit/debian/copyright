@@ -1,0 +1,11 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: measurement-kit
+Source: https://github.com/measurement-kit/measurement-kit/
+
+Files: *
+Copyright: 2013-2016, Simone Basso, Arturo Filastò, Nexa Center for Internet & Society - Politecnico di Torino (DAUIN), and the measurement-kit contributors.
+License: BSD-2-Clause
+
+Files: debian/*
+Copyright: Simone Basso <bassosimone@gmail.com>
+License: BSD-2-Clause
