@@ -1,3 +1,9 @@
+measurement-kit (0.2.3-1) unstable; urgency=low
+
+  * Upgrade to v0.2.3
+
+ -- Simone Basso <bassosimone@gmail.com>  Fri, 08 Jul 2016 20:14:50 +0000
+
 measurement-kit (0.2.2-1) unstable; urgency=low
 
   * Initial release
