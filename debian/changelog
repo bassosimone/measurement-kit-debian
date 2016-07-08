@@ -1,3 +1,9 @@
+measurement-kit (0.2.3-2) unstable; urgency=low
+
+  * Repackage after significant changes in the repository
+
+ -- Simone Basso <bassosimone@gmail.com>  Sat Jul  9 00:04:18 CEST 2016
+
 measurement-kit (0.2.3-1) unstable; urgency=low
 
   * Upgrade to v0.2.3
