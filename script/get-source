@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
-v=0.2.3
+if [ $# -ne 1 ]; then
+    echo "usage: $0 version" 1>&2
+    exit 1
+fi
+v=$1
 repo=github.com/measurement-kit/measurement-kit
 t=measurement-kit-$v.tar.gz
 origt=`echo $t | sed "s/-$v/_$v.orig/"`
