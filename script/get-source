@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+v=0.2.3
+repo=github.com/measurement-kit/measurement-kit
+t=measurement-kit-$v.tar.gz
+origt=`echo $t | sed "s/$v/$v.orig/"`
+rm -f $t $t.asc $origt
+wget https://$repo/releases/download/v$v/$t
+wget https://$repo/releases/download/v$v/$t.asc
+gpg2 --verify $t.asc
+rm $t.asc
+ln $t $origt
