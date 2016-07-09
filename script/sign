@@ -4,3 +4,9 @@ for file in *.dsc; do
     gpg2 --clearsign -u 738877AA6C829F26A431C5F480B691277733D95B $file
     mv $file.asc $file
 done
+for file in *.changes; do
+    ./script/edit-changes $file > $file.new
+    mv $file.new $file
+    gpg2 --clearsign -u 738877AA6C829F26A431C5F480B691277733D95B $file
+    mv $file.asc $file
+done

@@ -1,4 +1,22 @@
-measurement-kit (0.2.3-2) unstable; urgency=low
+measurement-kit (0.2.3-2ubuntu4) xenial; urgency=medium
+
+  * Another bug: my name in the changed-by field is incorrect
+
+ -- Simone Basso <bassosimone@gmail.com>  Sat, 09 Jul 2016 00:28:20 +0000
+
+measurement-kit (0.2.3-2ubuntu3) xenial; urgency=medium
+
+  * We need to also upload the .orig package
+
+ -- Simone Basso <bassosimone@gmail.com>  Sat, 09 Jul 2016 00:22:48 +0000
+
+measurement-kit (0.2.3-2ubuntu2) xenial; urgency=low
+
+  * Repackage one more time to better adapt to Ubuntu (hopefully)
+
+ -- Simone Basso <bassosimone@gmail.com>  Sat, 09 Jul 2016 00:17:55 +0000
+
+measurement-kit (0.2.3-2) xenial; urgency=low
 
   * Repackage after significant changes in the repository
 
