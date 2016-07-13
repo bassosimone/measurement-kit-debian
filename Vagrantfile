@@ -1,6 +1,18 @@
 Vagrant.configure(2) do |config|
   config.vm.synced_folder ".", "/mk"
 
+  config.vm.define "build" do |build|
+    build.vm.box = "debian/contrib-jessie64"
+    build.vm.provider "virtualbox" do |v|
+      v.memory = 2048
+    end
+    build.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get update
+      sudo apt-get install -y autotools-dev debhelper devscripts lintian
+      sudo apt-get install -y libssl-dev libevent-dev libgeoip-dev
+    SHELL
+  end
+
   config.vm.define "trusty" do |trusty|
     trusty.vm.box = "ubuntu/trusty64"
     trusty.vm.provision "shell", inline: <<-SHELL

@@ -3,7 +3,21 @@
 Repository for creating MeasurementKit packages for Debian. You may need
 to add the `7733D95B` PGP key to your keyring.
 
+## How to create all packages in a single step
+
+```
+./script/get-source
+tar -xf measurement-kit-0.2.5.tar.gz
+vagrant up build
+vagrant ssh build
+cd /mk/measurement-kit-0.2.5
+export LC_ALL=C
+debuild
+```
+
 ## How to create source package
+
+**Note**: this part is currently broken.
 
 ```
 # on the host machine
@@ -26,6 +40,8 @@ for file in *.changes; do dput ppa:bassosimone/measurement-kit $file; done
 ```
 
 ## How to build source package on Debian
+
+**Note**: this part is currently broken.
 
 ```
 vagrant up jessie
