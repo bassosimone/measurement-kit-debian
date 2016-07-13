@@ -1,3 +1,9 @@
+measurement-kit (0.2.5-1) xenial; urgency=medium
+
+  * Package v0.2.5 for Debian and Ubuntu
+
+ -- Simone Basso <bassosimone@gmail.com>  Wed, 13 Jul 2016 15:54:27 +0000
+
 measurement-kit (0.2.3-2ubuntu4) xenial; urgency=medium
 
   * Another bug: my name in the changed-by field is incorrect
