@@ -9,4 +9,5 @@ wget https://$repo/releases/download/v$v/$t
 wget https://$repo/releases/download/v$v/$t.asc
 gpg2 --verify $t.asc
 rm $t.asc
-cp $t $origt
+mv $t $origt
+tar -xf $origt
