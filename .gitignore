@@ -1,8 +1,9 @@
-/.vagrant
 /*.deb
+/*.deb.asc
+/.vagrant
 /measurement-kit-*/
-/measurement-kit_*.debian.tar.xz
-/measurement-kit_*.dsc
 /measurement-kit_*.build
 /measurement-kit_*.changes
+/measurement-kit_*.debian.tar.xz
+/measurement-kit_*.dsc
 /measurement-kit_*.tar.gz

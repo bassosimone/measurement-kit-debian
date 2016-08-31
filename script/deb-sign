@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+for file in *.deb; do
+    gpg2 -u 7733D95B -b --armor $file
+done

@@ -12,6 +12,8 @@ vagrant ssh build
 cd /mk/measurement-kit-0.2.9
 export LC_ALL=C
 debuild
+exit
+./script/deb-sign
 ```
 
 ## How to create source package
