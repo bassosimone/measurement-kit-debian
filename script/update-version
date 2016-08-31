@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+if [ $# -ne 2 ]; then
+    echo "usage: $0 <old-version> <new-version>" 1>&2
+    exit 1
+fi
+git mv measurement-kit-$1 measurement-kit-$2
+cat README.md | sed "s/$1/$2/g" > README.md.new
+mv README.md.new README.md
+cat script/get-source | sed "s/$1/$2/g" > script/get-source.new
+mv script/get-source.new script/get-source
+chmod +x script/get-source
+cur_date=`date +"%a, %d %b %Y %H:%M:%S %z"`
+ofi=measurement-kit-$2/debian/changelog
+cp $ofi $ofi.old
+echo "measurement-kit ($2) jessie; urgency=medium"                        > $ofi
+echo ""                                                                  >> $ofi
+echo "  * Package v$2 for Debian and Ubuntu"                             >> $ofi
+echo ""                                                                  >> $ofi
+echo " -- Simone Basso <bassosimone@gmail.com>  $cur_date"               >> $ofi
+echo ""                                                                  >> $ofi
+cat $ofi.old >> $ofi
+rm $ofi.old
