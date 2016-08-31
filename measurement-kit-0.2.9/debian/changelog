@@ -1,3 +1,9 @@
+measurement-kit (0.2.9-1) xenial; urgency=medium
+
+  * Package v0.2.9 for Debian and Ubuntu
+
+ -- Simone Basso <bassosimone@gmail.com>  Wed, 31 Aug 2016 18:27:42 +0000
+
 measurement-kit (0.2.5-1) xenial; urgency=medium
 
   * Package v0.2.5 for Debian and Ubuntu

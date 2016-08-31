@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-v=0.2.5
+v=0.2.9
 repo=github.com/measurement-kit/measurement-kit
 t=measurement-kit-$v.tar.gz
 origt=`echo $t | sed "s/-$v/_$v.orig/"`

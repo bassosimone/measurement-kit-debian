@@ -9,7 +9,7 @@ to add the `7733D95B` PGP key to your keyring.
 ./script/get-source
 vagrant up build
 vagrant ssh build
-cd /mk/measurement-kit-0.2.5
+cd /mk/measurement-kit-0.2.9
 export LC_ALL=C
 debuild
 ```
