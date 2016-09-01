@@ -13,7 +13,7 @@ chmod +x script/get-source
 cur_date=`date +"%a, %d %b %Y %H:%M:%S %z"`
 ofi=measurement-kit-$2/debian/changelog
 cp $ofi $ofi.old
-echo "measurement-kit ($2) jessie; urgency=medium"                        > $ofi
+echo "measurement-kit ($2-1) jessie; urgency=medium"                      > $ofi
 echo ""                                                                  >> $ofi
 echo "  * Package v$2 for Debian and Ubuntu"                             >> $ofi
 echo ""                                                                  >> $ofi

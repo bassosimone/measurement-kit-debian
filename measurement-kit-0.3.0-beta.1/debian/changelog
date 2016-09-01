@@ -1,3 +1,15 @@
+measurement-kit (0.3.0-beta.1-1) jessie; urgency=medium
+
+  * Package v0.3.0-beta.1 for Debian and Ubuntu
+
+ -- Simone Basso <bassosimone@gmail.com>  Thu, 01 Sep 2016 19:50:21 +0200
+
+measurement-kit (0.3.0-beta-1) jessie; urgency=medium
+
+  * Package v0.3.0-beta for Debian and Ubuntu
+
+ -- Simone Basso <bassosimone@gmail.com>  Thu, 01 Sep 2016 18:30:16 +0200
+
 measurement-kit (0.2.9-1) xenial; urgency=medium
 
   * Package v0.2.9 for Debian and Ubuntu
