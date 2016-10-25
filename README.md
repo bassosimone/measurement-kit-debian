@@ -1,4 +1,4 @@
-# MeasurementKit Debian
+# MeasurementKit Debian [DEPRECATED]
 
 Repository for creating MeasurementKit packages for Debian. You may need
 to add the `7733D95B` PGP key to your keyring.
